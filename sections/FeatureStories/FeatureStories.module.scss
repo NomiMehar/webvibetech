@@ -1,0 +1,263 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.root {
+  padding-block: $space-4;
+}
+
+.band {
+  position: relative;
+  padding-block: $space-20;
+  overflow: hidden;
+  & + & {
+    margin-top: -1px;
+  }
+}
+
+.bandA {
+  background: $color-bg-elevated;
+  border-block: 1px solid $color-border;
+}
+
+.bandB {
+  background: radial-gradient(120% 80% at 10% 0%, rgba(255, 165, 40, 0.08), transparent 55%),
+    $color-bg;
+}
+
+.bandC {
+  background: linear-gradient(120deg, #fffdfb 0%, #f7f4ef 100%);
+}
+
+.inner {
+  @include site-container;
+  display: grid;
+  gap: $space-10;
+  align-items: center;
+  @include breakpoint($bp-lg) {
+    gap: $space-16;
+  }
+}
+
+.innerSplit {
+  @include breakpoint($bp-lg) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.innerSplitRev {
+  @include breakpoint($bp-lg) {
+    grid-template-columns: 1fr 1fr;
+    direction: rtl;
+    > * {
+      direction: ltr;
+    }
+  }
+}
+
+.copyOffset {
+  @include breakpoint($bp-lg) {
+    margin-top: $space-8;
+    margin-left: 8%;
+  }
+}
+
+.copyOffsetRev {
+  @include breakpoint($bp-lg) {
+    margin-top: $space-6;
+    margin-right: 10%;
+  }
+}
+
+.kicker {
+  font-size: $fs-xs;
+  font-weight: $fw-semibold;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: $color-text-muted;
+}
+
+.title {
+  margin-top: $space-3;
+  font-size: $fs-2xl;
+  font-weight: $fw-semibold;
+  letter-spacing: -0.03em;
+  line-height: $lh-snug;
+  max-width: 18ch;
+}
+
+.highlight {
+  @include gradient-text;
+}
+
+.body {
+  margin-top: $space-5;
+  font-size: $fs-sm;
+  color: $color-text-secondary;
+  line-height: $lh-relaxed;
+  max-width: 40ch;
+}
+
+.list {
+  margin-top: $space-6;
+  display: flex;
+  flex-direction: column;
+  gap: $space-3;
+}
+
+.listItem {
+  display: flex;
+  gap: $space-3;
+  font-size: $fs-sm;
+  color: $color-text;
+  line-height: $lh-normal;
+}
+
+.bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin-top: 0.45rem;
+  background: $color-primary;
+  flex-shrink: 0;
+}
+
+.visual {
+  position: relative;
+  min-height: 280px;
+  @include breakpoint($bp-lg) {
+    min-height: 340px;
+  }
+}
+
+// Variant A — node constellation
+.nodes {
+  position: absolute;
+  inset: 0;
+  border-radius: $radius-2xl;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid $color-border;
+  box-shadow: $shadow-md;
+  overflow: hidden;
+}
+
+.node {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: $color-primary;
+  box-shadow: 0 0 0 8px $color-primary-soft;
+}
+
+.line {
+  position: absolute;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255, 165, 40, 0.5), transparent);
+  transform-origin: left center;
+}
+
+.tag {
+  position: absolute;
+  bottom: $space-5;
+  left: $space-5;
+  padding: $space-2 $space-4;
+  border-radius: $radius-full;
+  font-size: $fs-xs;
+  font-weight: $fw-semibold;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(20, 18, 15, 0.78);
+  color: #fff;
+}
+
+// Variant B — orbit
+.orbitWrap {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+}
+
+.orbit {
+  width: min(100%, 360px);
+  height: min(100%, 360px);
+  border-radius: 50%;
+  border: 1px dashed rgba(255, 165, 40, 0.35);
+  position: relative;
+}
+
+.core {
+  position: absolute;
+  inset: 32%;
+  border-radius: $radius-xl;
+  @include glass(18px, 0.75);
+  box-shadow: $shadow-md;
+  display: grid;
+  place-items: center;
+  font-size: $fs-xs;
+  font-weight: $fw-semibold;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $color-text-secondary;
+}
+
+.sat {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  border-radius: $radius-lg;
+  background: $color-bg-elevated;
+  border: 1px solid $color-border;
+  box-shadow: $shadow-sm;
+  display: grid;
+  place-items: center;
+  font-size: 0.65rem;
+  font-weight: $fw-semibold;
+  text-transform: uppercase;
+  color: $color-text-muted;
+}
+
+// Variant C — stacked ribbons
+.ribbons {
+  position: absolute;
+  inset: 0;
+  perspective: 900px;
+}
+
+.ribbon {
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  height: 72px;
+  border-radius: $radius-lg;
+  background: linear-gradient(90deg, rgba(255, 165, 40, 0.15), rgba(255, 255, 255, 0.9));
+  border: 1px solid $color-border;
+  box-shadow: $shadow-sm;
+  transform: rotateX(12deg) rotateY(-8deg);
+  &:nth-child(1) {
+    top: 18%;
+  }
+  &:nth-child(2) {
+    top: 42%;
+    left: 12%;
+    right: 4%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(255, 165, 40, 0.12));
+  }
+  &:nth-child(3) {
+    top: 66%;
+    left: 4%;
+    right: 14%;
+  }
+}
+
+.ribbonLabel {
+  position: absolute;
+  left: $space-5;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: $fs-xs;
+  font-weight: $fw-semibold;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $color-text-secondary;
+}

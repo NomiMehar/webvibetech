@@ -1,0 +1,192 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.scrim {
+  position: fixed;
+  inset: 0;
+  top: var(--header-h, 4.5rem);
+  z-index: 1;
+  background: rgba(20, 18, 15, 0.38);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  @include transition(opacity visibility, $duration-base, $ease-out-expo);
+}
+
+.panel.open .scrim {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.panel {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: var(--header-h, 4.5rem);
+  z-index: $z-dropdown;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  pointer-events: none;
+  @include transition(opacity transform visibility, $duration-base, $ease-out-expo);
+  padding-top: $space-2;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -14px;
+    height: 14px;
+  }
+  &.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+}
+
+.drop {
+  position: relative;
+  z-index: 2;
+}
+
+.inner {
+  background: rgba(255, 255, 255);
+  backdrop-filter: blur(26px) saturate(1.15);
+  -webkit-backdrop-filter: blur(26px) saturate(1.15);
+  border: 1px solid rgba(20, 18, 15, 0.09);
+  border-radius: $radius-lg;
+  box-shadow: 0 28px 80px rgba(20, 18, 15, 0.14);
+  padding: $space-8;
+  display: grid;
+  gap: $space-8;
+  @include breakpoint($bp-lg) {
+    grid-template-columns: minmax(220px, 280px) 1fr;
+    align-items: stretch;
+  }
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: $space-1;
+  border-bottom: 1px solid $color-border;
+  padding-bottom: $space-6;
+  @include breakpoint($bp-lg) {
+    border-bottom: none;
+    border-right: 1px solid $color-border;
+    padding-bottom: 0;
+    padding-right: $space-8;
+  }
+}
+
+.catBtn {
+  display: flex;
+  align-items: center;
+  gap: $space-3;
+  text-align: left;
+  padding: $space-3 $space-4;
+  border-radius: $radius-md;
+  color: $color-text-secondary;
+  font-weight: $fw-medium;
+  font-size: $fs-sm;
+  @include transition(background-color color, $duration-fast, $ease-smooth);
+  &:hover,
+  &.active {
+    background: $color-primary-soft;
+    color: $color-text;
+  }
+}
+
+.catIcon {
+  color: $color-primary;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+}
+
+.right {
+  min-height: 200px;
+}
+
+.rightHead {
+  display: flex;
+  flex-direction: column;
+  gap: $space-2;
+  margin-bottom: $space-6;
+}
+
+.kicker {
+  font-size: $fs-xs;
+  font-weight: $fw-semibold;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $color-text-muted;
+}
+
+.title {
+  font-size: $fs-lg;
+  font-weight: $fw-semibold;
+  letter-spacing: -0.02em;
+  font-family: $font-display;
+}
+
+.tagline {
+  font-size: $fs-sm;
+  color: $color-text-secondary;
+  max-width: 36ch;
+  line-height: $lh-relaxed;
+}
+
+.grid {
+  display: grid;
+  gap: $space-3;
+  @include breakpoint($bp-md) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: $space-1;
+  padding: $space-4;
+  border-radius: $radius-md;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(20, 18, 15, 0.07);
+  @include transition(border-color transform background-color, $duration-fast, $ease-smooth);
+  &:hover {
+    border-color: $color-primary-mid;
+    transform: translateY(-2px);
+    background: #fff;
+  }
+}
+
+.itemTitle {
+  font-size: $fs-sm;
+  font-weight: $fw-semibold;
+  color: $color-text;
+}
+
+.itemHint {
+  font-size: $fs-xs;
+  color: $color-text-muted;
+}
+
+.viewAll {
+  margin-top: $space-6;
+  display: inline-flex;
+  align-items: center;
+  gap: $space-2;
+  font-size: $fs-sm;
+  font-weight: $fw-semibold;
+  color: $color-primary;
+  &:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+}

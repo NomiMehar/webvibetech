@@ -1,0 +1,70 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+
+.page {
+  background: $color-bg;
+  padding-bottom: $space-20;
+}
+
+.header {
+  padding-block: $space-12 $space-8;
+  background: $color-bg-elevated;
+  border-bottom: 1px solid $color-border;
+}
+
+.headerInner {
+  max-width: 42rem;
+}
+
+.back {
+  font-size: $fs-sm;
+  font-weight: $fw-semibold;
+  color: $color-primary;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.date {
+  margin-top: $space-6;
+  font-size: $fs-xs;
+  font-weight: $fw-semibold;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $color-text-muted;
+}
+
+.title {
+  margin-top: $space-3;
+  font-size: $fs-3xl;
+  font-weight: $fw-bold;
+  font-family: $font-display;
+  letter-spacing: -0.04em;
+  line-height: $lh-tight;
+}
+
+.excerpt {
+  margin-top: $space-4;
+  font-size: $fs-md;
+  color: $color-text-secondary;
+  line-height: $lh-relaxed;
+}
+
+.prose {
+  padding-top: $space-10;
+  max-width: 42rem;
+  font-size: $fs-sm;
+  color: $color-text-secondary;
+  line-height: $lh-relaxed;
+  p + p {
+    margin-top: $space-4;
+  }
+}
+
+.cta {
+  font-weight: $fw-semibold;
+  color: $color-primary;
+  &:hover {
+    text-decoration: underline;
+  }
+}

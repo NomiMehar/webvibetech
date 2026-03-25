@@ -1,0 +1,127 @@
+// Webvibe Tech — design tokens
+$color-primary: #ffa528;
+$color-primary-soft: rgba(255, 165, 40, 0.12);
+$color-primary-mid: rgba(255, 165, 40, 0.35);
+$color-accent: #ff8a00;
+$color-accent-2: #ffb84d;
+
+$color-bg: #faf9f7;
+$color-bg-elevated: #ffffff;
+$color-bg-muted: #f3f2ef;
+$color-surface: rgba(255, 255, 255, 0.72);
+
+$color-text: #14120f;
+$color-text-secondary: #5c5852;
+$color-text-muted: #8a847a;
+
+$color-border: rgba(20, 18, 15, 0.06);
+$color-border-strong: rgba(20, 18, 15, 0.1);
+
+$gradient-hero: linear-gradient(
+  135deg,
+  #fffefb 0%,
+  #faf7f2 42%,
+  #f6f2ec 100%
+);
+$gradient-mesh: radial-gradient(
+    ellipse 80% 60% at 18% 12%,
+    rgba(255, 165, 40, 0.14) 0%,
+    transparent 55%
+  ),
+  radial-gradient(
+    ellipse 70% 50% at 88% 8%,
+    rgba(255, 138, 0, 0.1) 0%,
+    transparent 50%
+  ),
+  radial-gradient(
+    ellipse 60% 45% at 72% 92%,
+    rgba(255, 184, 77, 0.08) 0%,
+    transparent 55%
+  );
+$gradient-cta: linear-gradient(
+  125deg,
+  #ff9f2e 0%,
+  #ffa528 38%,
+  #ffc56a 100%
+);
+$gradient-text: linear-gradient(
+  105deg,
+  #ff8a00 0%,
+  #ffa528 45%,
+  #ffd08a 100%
+);
+$gradient-subtle: linear-gradient(
+  180deg,
+  rgba(255, 255, 255, 0.95) 0%,
+  rgba(250, 249, 247, 0.4) 100%
+);
+
+$font-sans: var(--font-inter), system-ui, -apple-system, "Segoe UI", sans-serif;
+$font-display: var(--font-poppins), var(--font-inter), system-ui, sans-serif;
+
+$fs-xs: clamp(0.72rem, 0.68rem + 0.2vw, 0.8rem);
+$fs-sm: clamp(0.8rem, 0.76rem + 0.25vw, 0.9rem);
+$fs-base: clamp(0.95rem, 0.9rem + 0.2vw, 1.05rem);
+$fs-md: clamp(1.05rem, 1rem + 0.35vw, 1.2rem);
+$fs-lg: clamp(1.2rem, 1.05rem + 0.8vw, 1.5rem);
+$fs-xl: clamp(1.45rem, 1.2rem + 1.2vw, 2rem);
+$fs-2xl: clamp(1.85rem, 1.4rem + 2vw, 2.75rem);
+$fs-3xl: clamp(2.35rem, 1.6rem + 3.2vw, 3.75rem);
+$fs-hero: clamp(2.5rem, 1.5rem + 4.5vw, 4.25rem);
+
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
+
+$lh-tight: 1.12;
+$lh-snug: 1.25;
+$lh-normal: 1.55;
+$lh-relaxed: 1.7;
+
+$space-1: 0.25rem;
+$space-2: 0.5rem;
+$space-3: 0.75rem;
+$space-4: 1rem;
+$space-5: 1.25rem;
+$space-6: 1.5rem;
+$space-8: 2rem;
+$space-10: 2.5rem;
+$space-12: 3rem;
+$space-16: 4rem;
+$space-20: 5rem;
+$space-24: 6rem;
+$space-28: 7rem;
+$space-32: 8rem;
+
+$radius-sm: 0.25rem;
+$radius-md: 0.375rem;
+$radius-lg: 0.5rem;
+$radius-xl: 0.625rem;
+$radius-2xl: 0.875rem;
+$radius-full: 9999px;
+
+$shadow-xs: 0 1px 2px rgba(20, 18, 15, 0.04);
+$shadow-sm: 0 4px 16px rgba(20, 18, 15, 0.06);
+$shadow-md: 0 12px 40px rgba(20, 18, 15, 0.08);
+$shadow-lg: 0 24px 64px rgba(20, 18, 15, 0.1);
+$shadow-glow: 0 20px 60px rgba(255, 165, 40, 0.22);
+
+$z-base: 0;
+$z-dropdown: 40;
+$z-sticky: 50;
+$z-header: 60;
+$z-overlay: 70;
+$z-modal: 80;
+
+$bp-sm: 36rem;
+$bp-md: 48rem;
+$bp-lg: 64rem;
+$bp-xl: 80rem;
+$bp-2xl: 96rem;
+
+$ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+$ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+$duration-fast: 160ms;
+$duration-base: 280ms;
+$duration-slow: 480ms;

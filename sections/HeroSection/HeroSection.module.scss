@@ -1,0 +1,247 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.root {
+  position: relative;
+  padding-block: $space-4 $space-8;
+  overflow: hidden;
+  background: $gradient-hero;
+  @include breakpoint($bp-lg) {
+    padding-block: $space-12 $space-24;
+  }
+}
+
+.bgMesh {
+  position: absolute;
+  inset: 0;
+  background: $gradient-mesh;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.35;
+  pointer-events: none;
+  &.a {
+    width: min(42vw, 520px);
+    height: min(42vw, 520px);
+    background: rgba(255, 165, 40, 0.45);
+    top: -12%;
+    left: -8%;
+  }
+  &.b {
+    width: min(36vw, 440px);
+    height: min(36vw, 440px);
+    background: rgba(255, 200, 120, 0.35);
+    bottom: -18%;
+    right: -6%;
+  }
+}
+
+.inner {
+  // @include site-container;
+  position: relative;
+  display: grid;
+  align-items: start;
+  @include breakpoint($bp-lg) {
+    grid-template-columns: 1.05fr 0.95fr;
+  }
+}
+
+.copy {
+  padding-top: $space-4;
+  @include breakpoint($bp-lg) {
+    padding-top: $space-8;
+  }
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-2;
+  font-size: $fs-xs;
+  font-weight: $fw-semibold;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: $color-text-muted;
+  margin-bottom: $space-5;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: $color-primary;
+  box-shadow: 0 0 0 6px $color-primary-soft;
+}
+
+.headline {
+  font-size: $fs-hero;
+  font-weight: $fw-bold;
+  letter-spacing: -0.04em;
+  line-height: $lh-tight;
+  max-width: 14ch;
+  @include breakpoint($bp-lg) {
+    max-width: 18ch;
+  }
+}
+
+.gradientWord {
+  @include gradient-text;
+}
+
+.lede {
+  margin-top: $space-6;
+  font-size: $fs-md;
+  color: $color-text-secondary;
+  max-width: 48ch;
+  line-height: $lh-relaxed;
+}
+
+.ctas {
+  margin-top: $space-8;
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-3;
+  align-items: center;
+}
+
+.note {
+  margin-top: $space-6;
+  font-size: $fs-xs;
+  color: $color-text-muted;
+  max-width: 42ch;
+  line-height: $lh-normal;
+}
+
+.visual {
+  position: relative;
+  min-height: 380px;
+  @include breakpoint($bp-lg) {
+    min-height: 500px;
+    margin-top: $space-6;
+  }
+}
+
+.stack {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: $space-4;
+  max-width: 100%;
+  @include breakpoint($bp-lg) {
+    position: absolute;
+    inset: 0;
+    max-width: 440px;
+    margin-left: auto;
+    display: block;
+    gap: 0;
+  }
+}
+
+.card {
+  position: relative;
+  border-radius: $radius-lg;
+  @include glass(22px, 0.96);
+  box-shadow: $shadow-md;
+  padding: $space-5 $space-6;
+  width: 100%;
+  border: 1px solid rgba(20, 18, 15, 0.06);
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(22px) saturate(1.05);
+  -webkit-backdrop-filter: blur(22px) saturate(1.05);
+  @include breakpoint($bp-lg) {
+    position: absolute;
+    width: 68%;
+  }
+  &.c1 {
+    @include breakpoint($bp-lg) {
+      top: 0;
+      left: 0;
+      z-index: 3;
+      rotate: -1.5deg;
+    }
+  }
+  &.c2 {
+    @include breakpoint($bp-lg) {
+      top: 44%;
+      right: 0;
+      left: auto;
+      z-index: 99;
+      rotate: 2deg;
+      width: 64%;
+    }
+  }
+  &.c3 {
+    @include breakpoint($bp-lg) {
+      bottom: -15%;
+      left: -10%;
+      z-index: 1;
+      rotate: -0.75deg;
+      width: 72%;
+    }
+  }
+}
+
+.cardKicker {
+  font-size: $fs-xs;
+  font-weight: $fw-semibold;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $color-text-muted;
+}
+
+.cardTitle {
+  margin-top: $space-2;
+  font-size: $fs-lg;
+  font-weight: $fw-semibold;
+  letter-spacing: -0.02em;
+}
+
+.cardBody {
+  margin-top: $space-3;
+  font-size: $fs-sm;
+  color: $color-text-secondary;
+  line-height: $lh-relaxed;
+}
+
+@include breakpoint($bp-lg) {
+  .card.c2 {
+    transform: translateY(8px);
+  }
+  .card.c3 {
+    transform: translateY(6px);
+  }
+}
+
+.pillRow {
+  margin-top: $space-4;
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-2;
+}
+
+.pill {
+  font-size: $fs-xs;
+  font-weight: $fw-medium;
+  padding: $space-1 $space-3;
+  border-radius: $radius-md;
+  background: $color-primary-soft;
+  color: $color-text;
+  border: 1px solid rgba(255, 165, 40, 0.25);
+}
+
+.spark {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border: 1px dashed rgba(255, 165, 40, 0.35);
+  border-radius: 32% 68% 40% 60% / 40% 45% 55% 60%;
+  right: 6%;
+  top: 12%;
+  opacity: 0.7;
+  pointer-events: none;
+}
