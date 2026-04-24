@@ -1,0 +1,31 @@
+.scrollTop {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: -15px;
+  z-index: 99999;
+  background-color: var(--accent-color);
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s;
+  color: var(--contrast-color);
+  text-decoration: none;
+}
+.scrollTop i {
+  font-size: 24px;
+  line-height: 0;
+}
+.scrollTop:hover {
+  background-color: rgba(242, 152, 41, 0.8);
+  color: var(--contrast-color);
+}
+.scrollTop.active {
+  visibility: visible;
+  opacity: 1;
+  bottom: 15px;
+}

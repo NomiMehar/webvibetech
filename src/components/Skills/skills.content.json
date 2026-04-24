@@ -1,0 +1,16 @@
+{
+  "id": "skills",
+  "heading": "Technologies ",
+  "headingStrong": "We Use",
+  "intro": "We use modern technologies to build high-performance and scalable web applications.",
+  "imageSrc": "/assets/img/skills.png",
+  "imageAlt": "WebVibe Web Development Technologies",
+  "bars": [
+    { "name": "React Development", "value": 96 },
+    { "name": "Next.js Development", "value": 95 },
+    { "name": "Laravel Development", "value": 94 },
+    { "name": "WordPress Development", "value": 93 },
+    { "name": "Tailwind CSS", "value": 95 },
+    { "name": "Bootstrap", "value": 92 }
+  ]
+}

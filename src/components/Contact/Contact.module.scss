@@ -1,0 +1,12 @@
+.contact { padding: 100px 0; background: var(--background-color); scroll-margin-top: 88px; }
+.formWrap { max-width: 700px; margin: 0 auto; }
+.phpEmailForm { background: var(--surface-color); padding: 30px; border-top: 3px solid var(--accent-color); border-bottom: 3px solid var(--accent-color); box-shadow: 0 0 20px rgba(0,0,0,0.1); }
+.row { display: flex; flex-wrap: wrap; gap: 1rem; }
+.colHalf { flex: 1 1 calc(50% - 0.5rem); min-width: 200px; }
+.colFull { flex: 1 1 100%; }
+.phpEmailForm label { display: block; padding-bottom: 8px; }
+.phpEmailForm input, .phpEmailForm textarea { width: 100%; font-size: 14px; padding: 10px 15px; border: 1px solid rgba(68,68,68,0.2); }
+.phpEmailForm button[type="submit"] { background: var(--accent-color); color: #fff; border: 0; padding: 10px 30px; border-radius: 50px; cursor: pointer; }
+.loading { text-align: center; padding: 15px; }
+.errorMessage { background: #666; color: #fff; padding: 15px; margin-bottom: 24px; }
+.sentMessage { background: #059652; color: #fff; text-align: center; padding: 15px; margin-bottom: 24px; }

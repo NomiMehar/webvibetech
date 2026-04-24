@@ -1,0 +1,48 @@
+@use "../../styles/variables" as *;
+@use "../../styles/breakpoints" as *;
+
+.about {
+  padding: 100px 0;
+  scroll-margin-top: 88px;
+}
+.row {
+  display: grid;
+  gap: 2rem;
+}
+@media (min-width: 992px) {
+  .row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+}
+.content ul li {
+  padding-bottom: 5px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.content ul li i {
+  color: var(--accent-color);
+  font-size: 20px;
+  flex-shrink: 0;
+}
+.readMore {
+  color: var(--accent-color);
+  font-family: var(--heading-font);
+  font-weight: 500;
+  font-size: 16px;
+  padding: 8px 28px;
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid var(--accent-color);
+}
+.readMore:hover {
+  background: var(--accent-color);
+  color: #fff;
+}

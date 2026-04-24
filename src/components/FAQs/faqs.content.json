@@ -1,0 +1,19 @@
+{
+  "id": "faqs",
+  "title": "Frequently Asked Questions",
+  "subtitle": "Quick answers to common questions about our web development services.",
+  "items": [
+    {
+      "q": "How much does a website cost?",
+      "a": "Website cost depends on features, number of pages, and project complexity."
+    },
+    {
+      "q": "How long does it take to develop a website?",
+      "a": "Most business websites are completed within 1–3 weeks, depending on project requirements."
+    },
+    {
+      "q": "Do you provide website maintenance?",
+      "a": "Yes. We offer ongoing maintenance, updates, and performance optimization services."
+    }
+  ]
+}

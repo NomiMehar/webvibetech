@@ -1,0 +1,65 @@
+{
+  "id": "pricing",
+  "title": "Flexible Pricing for Every Business",
+  "subtitle": "Choose a web development package that fits your business needs. All our websites are built with performance, SEO, and scalability in mind.",
+  "plans": [
+    {
+      "title": "Business Website",
+      "desc": "Best for small businesses and startups.",
+      "price": "499.00",
+      "sup": "$",
+      "features": [
+        "Custom-designed website (Up to 5 pages)",
+        "Mobile-responsive and SEO-friendly",
+        "Contact form and basic Integrations",
+        "Social media Integration",
+        "Google Analytics",
+        "Basic on-page SEO"
+      ]
+    },
+    {
+      "title": "MVP Development",
+      "desc": "Best for startups validating their idea.",
+      "price": "1999.00",
+      "sup": "$",
+      "featured": true,
+      "features": [
+        "Tailored MVP for startups",
+        "Frontend and Backend development",
+        "Database and API development",
+        "User authentication and admin panel",
+        "Performance and security optimization",
+        "1-month free support"
+      ]
+    },
+    {
+      "title": "Custom Web Solution",
+      "desc": "Advanced custom features and solutions.",
+      "price": "Custom Quote",
+      "sup": null,
+      "features": [
+        "Fully customized solutions",
+        "Advanced functionalities",
+        "Scalable architecture",
+        "Performance and security",
+        "Ongoing support and maintenance"
+      ]
+    }
+  ],
+  "wideCard": {
+    "title": "Quick Solutions and Custom Work",
+    "desc": "Specific tasks handled quickly and professionally.",
+    "price": "99",
+    "sup": "$",
+    "startingFrom": " Starting From",
+    "features": [
+      "Figma/XD to Web Development",
+      "WordPress and Shopify Customization",
+      "Bug Fixes and Performance Optimization",
+      "API and Third-Party Integrations",
+      "Custom Graphic Design and Branding",
+      "Ongoing Support and Maintenance"
+    ]
+  },
+  "ctaHref": "/#contact"
+}

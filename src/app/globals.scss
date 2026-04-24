@@ -1,0 +1,158 @@
+// ==========================================================================
+// Global styles — reset, CSS custom properties, shared base
+// ==========================================================================
+
+@use "../styles/variables" as *;
+
+/* CSS custom properties (mirror original :root) */
+:root {
+  --default-font: #{$default-font};
+  --heading-font: #{$heading-font};
+  --nav-font: #{$nav-font};
+  --background-color: #{$background-color};
+  --default-color: #{$default-color};
+  --heading-color: #{$heading-color};
+  --accent-color: #{$accent-color};
+  --surface-color: #{$surface-color};
+  --contrast-color: #{$contrast-color};
+  --nav-color: #{$nav-color};
+  --nav-hover-color: #{$nav-hover-color};
+  --nav-mobile-background-color: #{$nav-mobile-background-color};
+  --nav-dropdown-background-color: #{$nav-dropdown-background-color};
+  --nav-dropdown-color: #{$nav-dropdown-color};
+  --nav-dropdown-hover-color: #{$nav-dropdown-hover-color};
+  scroll-behavior: smooth;
+}
+
+/* Reset / box-sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--default-color);
+  font-family: var(--default-font);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s;
+  color: #646263;
+  &:hover {
+    color: var(--accent-color);
+  }
+}
+
+.active {
+  color: var(--accent-color);
+}
+
+/* PHP Email Form messages (contact form states) */
+.phpEmailForm .errorMessage {
+  display: none;
+  background: #666;
+  color: #fff;
+  text-align: left;
+  padding: 15px;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+.phpEmailForm .errorMessage a {
+  color: #f29829;
+}
+
+.phpEmailForm .sentMessage {
+  display: none;
+  color: #fff;
+  background: #059652;
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+.phpEmailForm .loading {
+  display: none;
+  background: var(--surface-color);
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 24px;
+}
+
+.phpEmailForm .loading::before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid var(--accent-color);
+  border-top-color: var(--surface-color);
+  animation: phpLoading 1s linear infinite;
+}
+
+@keyframes phpLoading {
+  to { transform: rotate(360deg); }
+}
+
+/* Utility: light/dark section backgrounds */
+.lightBackground {
+  --background-color: #f5f6f8;
+  --surface-color: #ffffff;
+}
+
+.darkBackground {
+  --background-color: #f29829;
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  --surface-color: #f29829;
+  --contrast-color: #ffffff;
+}
+
+/* Shared layout container */
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.main {
+  padding-top: 0;
+}
+
+.serviceDetailsHero {
+  padding: 120px 0 60px;
+  text-align: center;
+}
+.serviceDetailsContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.serviceDetailsLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.serviceDetailsBtn {
+  padding: 12px 24px;
+  background: var(--accent-color);
+  color: #fff;
+  border-radius: 50px;
+  font-weight: 600;
+}
+.serviceDetailsBtn:hover {
+  background: #ffb347;
+  color: #fff;
+}

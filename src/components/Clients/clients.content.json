@@ -1,0 +1,16 @@
+{
+  "id": "clients",
+  "intro": "Trusted by Startups, Businesses & Growing Brands",
+  "description": "Companies choose WebVibe because we build websites that combine performance, scalability, and modern design. Our goal is simple: create digital experiences that help businesses grow online and attract more customers.",
+  "logos": [
+    { "src": "/assets/img/clients/client-1.png", "alt": "WebVibe Client Logo" },
+    { "src": "/assets/img/clients/client-2.avif", "alt": "WebVibe Client Logo" },
+    { "src": "/assets/img/clients/client-3.jpg", "alt": "WebVibe Client Logo" },
+    { "src": "/assets/img/clients/client-4.svg", "alt": "WebVibe Client Logo" },
+    { "src": "/assets/img/clients/client-5.jpg", "alt": "WebVibe Client Logo" },
+    { "src": "/assets/img/clients/client-6.svg", "alt": "WebVibe Client Logo" },
+    { "src": "/assets/img/clients/client-7.jpg", "alt": "WebVibe Client Logo" },
+    { "src": "/assets/img/clients/client-8.png", "alt": "WebVibe Client Logo" },
+    { "src": "/assets/img/clients/client-9.svg", "alt": "WebVibe Client Logo" }
+  ]
+}

@@ -1,0 +1,33 @@
+@use "../../styles/variables" as *;
+@use "../../styles/breakpoints" as *;
+
+.skills {
+  padding: 100px 0;
+  scroll-margin-top: 88px;
+}
+.row {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+}
+@media (min-width: 992px) {
+  .row { grid-template-columns: 1fr 1fr; }
+}
+.imgWrap { text-align: center; }
+.img { max-width: 100%; height: auto; }
+.content h3 { font-size: 2rem; font-weight: 700; margin-bottom: 20px; color: #444; }
+.content strong { color: var(--accent-color); }
+.content p { color: rgba(68,68,68,0.7); margin-bottom: 30px; }
+.italic { font-style: italic; }
+.progress { margin-bottom: 1rem; }
+.skill { display: block; font-weight: 600; font-family: var(--heading-font); text-transform: uppercase; margin-bottom: 6px; }
+.val { float: right; font-style: normal; }
+.progressBarWrap {
+  background: rgba(242, 152, 41, 0.1);
+  height: 10px;
+}
+.progressBar {
+  height: 10px;
+  transition: width 0.9s;
+  background-color: var(--heading-color);
+}

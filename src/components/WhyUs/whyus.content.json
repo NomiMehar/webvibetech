@@ -1,0 +1,31 @@
+{
+  "id": "process",
+  "heading": "Our Web ",
+  "headingStrong": "Development Process",
+  "headingSuffix": "",
+  "intro": "From discovery to launch, we follow a clear process so your project stays on track and delivers results.",
+  "faqItems": [
+    {
+      "num": "01",
+      "q": "Discovery",
+      "a": "We start by understanding your business goals, target audience, and project requirements."
+    },
+    {
+      "num": "02",
+      "q": "Design",
+      "a": "Our team creates modern UI/UX designs focused on usability and engagement."
+    },
+    {
+      "num": "03",
+      "q": "Development",
+      "a": "We build scalable websites using modern frameworks and clean code practices."
+    },
+    {
+      "num": "04",
+      "q": "Launch",
+      "a": "Before launching, we optimize your website for speed, SEO, and security."
+    }
+  ],
+  "imageSrc": "/assets/img/why-us.png",
+  "imageAlt": "WebVibe Web Development Process"
+}

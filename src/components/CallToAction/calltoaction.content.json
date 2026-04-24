@@ -1,0 +1,7 @@
+{
+  "id": "call-to-action",
+  "heading": "Ready to Build Your Website?",
+  "paragraph": "Let's create a fast, modern, and scalable website that helps your business grow online.",
+  "primaryCta": { "label": "Start Your Project", "href": "/#contact" },
+  "secondaryCta": { "label": "Contact Us", "href": "/#contact" }
+}

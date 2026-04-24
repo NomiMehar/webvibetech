@@ -1,0 +1,15 @@
+{
+  "id": "contact",
+  "title": "Contact",
+  "subtitle": "We would love to hear from you! Fill out the form below or reach out via email or phone. Let us connect and start building your digital presence today!",
+  "labels": {
+    "name": "Your Name",
+    "email": "Your Email",
+    "subject": "Subject",
+    "message": "Message"
+  },
+  "submitLabel": "Send Message",
+  "loadingLabel": "Loading",
+  "sentMessage": "Your message has been sent. Thank you!",
+  "errorMessage": "Sorry, there was an error sending your message. Please try again or contact us at info@webvibetech.com"
+}

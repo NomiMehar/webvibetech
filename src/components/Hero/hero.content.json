@@ -1,0 +1,13 @@
+{
+  "id": "home",
+  "subtitle": "Web Development Agency",
+  "titlePrefix": "Custom Web Development for Fast, Scalable & ",
+  "highlight": "High-Performance Websites",
+  "description": "WebVibe is a modern web development agency that helps businesses build fast, SEO-optimized websites and web applications using technologies like React, Next.js, Laravel, and WordPress. We focus on creating websites that not only look great but also improve performance, user experience, and conversions.",
+  "primaryCta": { "label": "Start Your Project", "href": "/#contact" },
+  "secondaryCta": { "label": "View Our Work", "href": "/#portfolio" },
+  "stats": [
+    { "value": "500+", "label": "Projects Done" },
+    { "value": "98%", "label": "Happy Clients" }
+  ]
+}
